@@ -1,8 +1,8 @@
-import type { Theme } from '@/types/theme'
+import type { ThemeVariant } from "@/types/theme";
 
 interface BackgroundVariantProps {
-  variant: Theme
-  isActive: boolean
+  variant: ThemeVariant;
+  isActive: boolean;
 }
 
 export function BackgroundVariant({ variant, isActive }: BackgroundVariantProps) {

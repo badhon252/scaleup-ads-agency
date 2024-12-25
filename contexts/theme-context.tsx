@@ -1,17 +1,17 @@
 'use client'
 
 import { createContext, useContext, useEffect, useState } from 'react'
-import type { Theme } from '@/types/theme'
+import type { ThemeVariant } from "@/types/theme";
 
 interface ThemeContextType {
-  theme: Theme
-  toggleTheme: () => void
+  theme: ThemeVariant;
+  toggleTheme: () => void;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('light')
+  const [theme, setTheme] = useState<ThemeVariant>("light");
 
   const toggleTheme = () => {
     setTheme((prev) => {
