@@ -1,7 +1,3 @@
-
-
-
-
 .hero__area-3 .sec-sub-title {
   font-size: 24px;
   font-weight: 600;
@@ -17,7 +13,6 @@
 
 .hero__text-3 {
   max-width: 320px;
-  padding-top: 90px;
   position: relative;
   z-index: 9;
 }
@@ -25,7 +20,12 @@
 .sec-title{
   line-height: 1;
 }
-
+.nav-menu-list li {
+  padding-left: 50px
+}
+a.text-sm.font-medium.transition-colors.hover\:text-primary {
+    padding: 10px 40px;
+}
 
 @media only screen and (min-width: 1400px) and (max-width: 1919px) {
   .hero__area-3 .sec-title {
@@ -33,3 +33,16 @@
   }
 }
 
+#hero-section li button{
+  background-color: transparent;
+}
+
+.hero__area-3 .sec-sub-title::after {
+  position: absolute; 
+  content: "";
+  width: 90px;
+  height: 1px;
+  left: 100%;
+  top: 15px;
+  background-color: black;
+}

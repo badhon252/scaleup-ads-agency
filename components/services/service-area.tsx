@@ -38,14 +38,14 @@ export default function ServiceArea() {
     <section className="service__area min-h-screen">
       <div className="container mx-auto">
         {/* Service Area Header */}
-        <div className="service__area--header pl-[300px] pt-[130px] relative">
+        <div className="service__area--header md:pl-[300px] md:pt-[130px] relative">
           <div className="bg-white">
-            <h4 className="text-[1rem] pt-[50px] pb-3 uppercase">Services</h4>
-            <h1 className="text-[60px] font-bold uppercase pb-[40px]">
+            <h4 className="text-[1rem] py-4 md:pt-[50px] pb-3 uppercase">Services</h4>
+            <h1 className="md:text-[60px] text-4xl font-bold uppercase py-4 md:pb-[40px]">
               Our Marketing <br /> Services
             </h1>
           </div>
-          <p className="service__area--header-subtitle pt-[70px] pb-[60px] text-base ml-[250px] max-w-[410px] text-gray-600">
+          <p className="service__area--header-subtitle md:pt-[70px] md:pb-[60px] text-base md:ml-[250px] max-w-[410px] text-gray-600">
             Consumers today rely heavily on digital means to research products.
             We research brands by blending engaging content, while 51% of
             consumers say they use Google to research products before buying.

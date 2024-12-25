@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/contexts/theme-context'
-import { Header } from '@/components/layout/header'
 import '@/public/styles/globals.css'
 import CustomCursor from '@/lib/custom-cursor'
 import TopNavigationButton from '@/components/top-navigation-btn'
+import { Navbar } from '@/components/navbar/nav/navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <CustomCursor/>
         <ThemeProvider>
-          <Header />
+          <Navbar />
           {children}
         </ThemeProvider>
         <TopNavigationButton/>

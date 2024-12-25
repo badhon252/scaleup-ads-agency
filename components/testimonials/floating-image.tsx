@@ -22,7 +22,7 @@ export function FloatingImage({
       transition={{
         type: "spring",
         stiffness: 700,
-        damping: 30,
+        damping: 130,
         mass: 0.7,
       }}
     >

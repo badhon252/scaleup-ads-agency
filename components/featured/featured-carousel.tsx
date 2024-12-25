@@ -66,7 +66,7 @@ export function FeaturedCarousel({ items }: FeaturedCarouselProps) {
                   {/* Text Content */}
                   <div className="relative flex flex-col justify-center px-24   z-50">
                     <div className="absolute top-0 right-24 ">
-                      <span className="text-[40px] font-medium tracking-wide">
+                      <span className="md:text-[40px] text-2xl font-medium tracking-wide">
                         {currentIndex + 1} / {items.length}
                       </span>
                     </div>
@@ -82,10 +82,10 @@ export function FeaturedCarousel({ items }: FeaturedCarouselProps) {
                         }}
                         className="space-y-2"
                       >
-                        <h2 className="text-[130px] font-bold leading-[0.95] tracking-[-0.02em] whitespace-pre-line">
+                        <h2 className="md:text-[130px] text-4xl font-bold leading-[0.95] tracking-[-0.02em] whitespace-pre-line">
                           {item.title}
                         </h2>
-                        <p className="text-[130px] font-bold leading-[0.95] tracking-[-0.02em]">
+                        <p className="md:text-[130px] text-4xl font-bold leading-[0.95] tracking-[-0.02em]">
                           {item.year}
                         </p>
                       </motion.div>

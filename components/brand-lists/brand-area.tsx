@@ -10,10 +10,10 @@ import BrandImg from './brand-img';
 export default function BrandLists() {
   return (
     <div className=" brand-area container mx-auto text-center py-[140px]">
-      <h1 className="text-md font-semibold uppercase py-8">
+      <h1 className="text-md font-semibold uppercase my-8">
         We worked with global largest brands
       </h1>
-      <div className="brand-list flex justify-between items-center">
+      <div className="brand-list flex justify-between items-center my-16 flex-wrap gap-8">
         <BrandImg img={client1} />
         <BrandImg img={client2} />
         <BrandImg img={client3} />

@@ -1,5 +1,7 @@
 "use client";
 
+import "@/public/styles/hero.css";
+
 import * as React from "react";
 import Link from "next/link";
 import {
@@ -25,14 +27,14 @@ export function NavMenu() {
                   {item.label}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                  <ul className="flex justify-between nav-menu-list">
                     {item.children.map((child) => (
                       <ListItem
                         key={child.label}
                         title={child.label}
                         href={child.href}
-                      />
-                    ))}
+                      /> 
+                    ))} 
                   </ul>
                 </NavigationMenuContent>
               </>
@@ -60,18 +62,18 @@ const ListItem = React.forwardRef<
 >(({ className, title, children, ...props }, ref) => {
   return (
     <li>
-      <NavigationMenuLink asChild>
+      <NavigationMenuLink>
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            " ",
             className
           )}
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>
           {children && (
-            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            <p className="lmx-[40px] ine-clamp-2 text-sm leading-snug text-muted-foreground">
               {children}
             </p>
           )}

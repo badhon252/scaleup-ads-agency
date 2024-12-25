@@ -14,16 +14,13 @@ export default function ServiceCategory({
 }: ServiceCategoryProps) {
   return (
     <>
-      <hr className="text-gray-100 mt-8" />
-
-      <div className="service__category pt-[55px] pb-[50px] flex justify-between">
-        <h1 className="text-4xl font-bold uppercase leading-loose basis-1/4 text-wrap">
+      <hr className="text-gray-100 md:mt-8" />
+      <div className="service__category md:pt-[55px] md:pb-[50px] md:flex justify-between">
+        <h1 className="text-3xl font-bold uppercase leading-tight pb-4 basis-1/4 text-wrap">
           {title}
         </h1>
-
         <div className="service__category-details max-w-[400px] font-medium basis-1/4">
           <p className="text-lg">{description}</p>
-
           <ServiceCategoryList list={list} />
         </div>
 
@@ -47,7 +44,7 @@ const ServiceCategoryList = ({ list }: { list: string[] }) => (
 // Button component
 const DetailsButton = () => (
   <button
-    className="basis-2/5 max-w-[200px] max-h-[200px] border rounded-full hover:bg-gray-900 hover:text-white transition-colors duration-500"
+    className="basis-2/5 mt-8 md:max-w-[200px] md:max-h-[200px] min-w-[200px] min-h-[200px] border rounded-full hover:bg-gray-900 hover:text-white transition-colors duration-500"
     aria-label="See details"
   >
     <Link href="#">
