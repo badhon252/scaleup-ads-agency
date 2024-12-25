@@ -1,8 +1,8 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion} from "framer-motion";
 import Image from "next/image";
-import { ArrowUpRight, Settings2 } from "lucide-react";
+import { ArrowUpRight} from "lucide-react";
 import Link from "next/link";
 import { useRef } from "react";
 import { ParallaxScroll } from "@/components/ui/parallax-scroll";
@@ -45,12 +45,12 @@ const fadeUpVariants = {
 
 export function BlogSection() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
+  // const { scrollYProgress } = useScroll({
+  //   target: containerRef,
+  //   offset: ["start end", "end start"],
+  // });
 
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
+  // const rotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
 
   return (
     <section
@@ -59,14 +59,7 @@ export function BlogSection() {
     >
       <CustomCursor />
       <div className="container relative mx-auto px-4 md:px-6">
-        {/* Settings Icon */}
-        <motion.div
-          className="absolute right-4 top-4 z-10 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-black"
-          whileHover={{ scale: 1.1 }}
-          style={{ rotate }}
-        >
-          <Settings2 className="h-6 w-6 text-white" />
-        </motion.div>
+       
 
         {/* Header Content */}
         <div className="relative">
@@ -141,13 +134,15 @@ export function BlogSection() {
                           className="object-cover"
                         />
                       </motion.div>
-                      <motion.div
+                      {/* <motion.div
                         className="absolute inset-0 bg-black/40 opacity-0 transition-opacity"
                         whileHover={{ opacity: 1 }}
-                      />
+                      /> */}
                     </div>
+
+                    {/* blog info  */}
                     <motion.div
-                      className="space-y-3"
+                      className="space-y-3 blog__info-3 absolute bottom-0 right-0 w-[63%] p-[40px] bg-white"
                       whileHover={{ x: 10 }}
                       transition={{ duration: 0.2 }}
                     >
@@ -156,7 +151,7 @@ export function BlogSection() {
                         <span>·</span>
                         <span>{post.date}</span>
                       </div>
-                      <h3 className="text-xl font-semibold leading-tight">
+                      <h3 className="text-xl font-semibold leading-tight text-[26px] pb-[50px] border-b-[1px] border-gray-200">
                         {post.title}
                       </h3>
                       <div className="inline-flex items-center gap-2 text-sm font-medium">

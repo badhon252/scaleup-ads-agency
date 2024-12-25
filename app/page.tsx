@@ -8,6 +8,7 @@ import { TestimonialCarousel } from '@/components/testimonials/testimonial-carou
 import HorizontalSections from '@/components/workflow/horizontal-sections';
 import PricingTable from '@/components/pricing-table/pricing-table';
 import { BlogSection } from '@/components/blog/blog-section';
+import Footer from '@/components/footer/footer';
 
 export default function HomePage() {
   return (
@@ -21,6 +22,7 @@ export default function HomePage() {
       <HorizontalSections/>
       <PricingTable/>
       <BlogSection/>
+      <Footer/>
     </main>
   )
 }

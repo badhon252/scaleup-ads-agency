@@ -1,7 +1,7 @@
-import type { ThemeVariant } from '@/types/theme'
+import type { Theme } from '@/types/theme'
 
 interface BackgroundVariantProps {
-  variant: ThemeVariant
+  variant: Theme
   isActive: boolean
 }
 
