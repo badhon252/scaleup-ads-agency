@@ -1,0 +1,6 @@
+.featured__carousel >Image  button{
+    display: hidden;
+}
+.featured__carousel >Image:hover  button{
+    display: block;
+}

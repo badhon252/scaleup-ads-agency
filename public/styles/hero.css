@@ -1,0 +1,35 @@
+
+
+
+
+.hero__area-3 .sec-sub-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--black-2);
+  position: relative;
+  display: inline-block;
+  padding-right: 30px;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  z-index: 2;
+  
+}
+
+.hero__text-3 {
+  max-width: 320px;
+  padding-top: 90px;
+  position: relative;
+  z-index: 9;
+}
+
+.sec-title{
+  line-height: 1;
+}
+
+
+@media only screen and (min-width: 1400px) and (max-width: 1919px) {
+  .hero__area-3 .sec-title {
+    font-size: 260px;
+  }
+}
+
