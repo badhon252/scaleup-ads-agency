@@ -61,7 +61,8 @@ export default function Footer() {
       {/* Bottom Section */}
       <div className="container mx-auto mt-16 px-4 flex flex-col md:flex-row justify-between items-center">
         <p className="text-gray-400 text-sm">
-          © 2022 - 2025 | All rights reserved by Wealcoder
+          © 2022 - 2025 | All rights reserved by{" "}
+          <Link href="@mailto:dev.khalidhossain@gmail.com">dev.khalidhossain@gmail.com</Link>
         </p>
         <nav className="flex space-x-8 mt-4 md:mt-0">
           {["ABOUT US", "CONTACT", "CAREER", "FAQS"].map((item) => (
