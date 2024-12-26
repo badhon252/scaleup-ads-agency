@@ -4,7 +4,7 @@ import { ThemeProvider } from '@/contexts/theme-context'
 import '@/public/styles/globals.css'
 import CustomCursor from '@/lib/custom-cursor'
 import TopNavigationButton from '@/components/top-navigation-btn'
-import { Navbar } from '@/components/navbar/nav/navbar'
+import { Navbar } from "@/components/nav/navbar"
 
 const inter = Inter({ subsets: ['latin'] })
 

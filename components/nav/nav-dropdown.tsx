@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
-import { NavItem } from "./nav-data";
+import { NavigationItem } from "./navigation-data";
 
 interface NavDropdownProps {
-  items: NavItem[];
+  items: NavigationItem[];
 }
 
 export function NavDropdown({ items }: NavDropdownProps) {
+  if (!items || items.length === 0) return null;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
