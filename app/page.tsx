@@ -5,10 +5,10 @@ import { FeaturedCarousel } from '@/components/featured/featured-carousel';
 import ServiceArea from '@/components/services/service-area'
 import { carouselItems } from "@/data/carousel-items";
 import { TestimonialCarousel } from '@/components/testimonials/testimonial-carousel';
-import HorizontalSections from '@/components/workflow/horizontal-sections';
 import PricingTable from '@/components/pricing-table/pricing-table';
 import { BlogSection } from '@/components/blog/blog-section';
 import Footer from '@/components/footer/footer';
+import HorizontalSections from '@/components/workflow/horizontal-sections';
 
 export default function HomePage() {
   return (
