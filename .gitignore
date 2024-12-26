@@ -35,3 +35,5 @@ public/sitemap.xml
 .vscode
 .env
 .env.local
+
+/TODO.md

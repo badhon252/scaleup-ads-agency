@@ -1,17 +1,15 @@
 "use client";
 
-import { motion} from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowUpRight} from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { useRef } from "react";
 import { ParallaxScroll } from "@/components/ui/parallax-scroll";
-import { CustomCursor } from "@/components/ui/cursor";
-
 
 import blogImg from "@/public/assets/blog1.webp";
 import blogImg2 from "@/public/assets/blog2.webp";
-
+import { FlipText } from "@/lib/RevealTexts";
 
 const BLOG_POSTS = [
   {
@@ -45,22 +43,13 @@ const fadeUpVariants = {
 
 export function BlogSection() {
   const containerRef = useRef<HTMLDivElement>(null);
-  // const { scrollYProgress } = useScroll({
-  //   target: containerRef,
-  //   offset: ["start end", "end start"],
-  // });
-
-  // const rotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
 
   return (
     <section
       ref={containerRef}
       className="relative min-h-screen w-full overflow-hidden bg-white py-24"
     >
-      <CustomCursor />
       <div className="container relative mx-auto px-4 md:px-6">
-       
-
         {/* Header Content */}
         <div className="relative">
           <motion.span
@@ -155,7 +144,7 @@ export function BlogSection() {
                         {post.title}
                       </h3>
                       <div className="inline-flex items-center gap-2 text-sm font-medium">
-                        Read More
+                        <FlipText>Read More</FlipText>
                         <ArrowUpRight className="h-4 w-4" />
                       </div>
                     </motion.div>

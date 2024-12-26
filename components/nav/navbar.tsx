@@ -6,6 +6,7 @@ import { FullScreenMenu } from "./full-screen-menu";
 import { Logo } from "./logo";
 import { NavDropdown } from "./nav-dropdown";
 import { navigationData } from "./navigation-data";
+import { FlipText } from "@/lib/RevealTexts";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +30,9 @@ export function Navbar() {
                   href={item.href}
                   className="text-sm font-medium text-gray-800 hover:text-gray-600"
                 >
+                  <FlipText>
                   {item.title}
+                  </FlipText>
                 </a>
                 {activeDropdown === item.title && item.children && (
                   <NavDropdown items={item.children} />

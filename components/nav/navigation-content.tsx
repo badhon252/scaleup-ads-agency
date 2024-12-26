@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 import { NavigationItem } from "./navigation-data";
+import { FlipText } from "@/lib/RevealTexts";
 
 interface NavigationContentProps {
   navigationData: NavigationItem[];
@@ -28,13 +29,12 @@ export function NavigationContent({
             }
             className="w-full flex items-center justify-between text-white group"
           >
-            <motion.span
+            <span
               className="text-4xl md:text-6xl font-semibold py-5"
-              whileHover={{ x: 20 }}
-              transition={{ duration: 0.2 }}
+            
             >
-              {item.title}
-            </motion.span>
+              <FlipText>{item.title}</FlipText>
+            </span>
             {item.children && item.children.length > 0 && (
               <span className="bg-neutral-800 flex justify-center items-center h-[100px] w-[84px] rounded font-bold">
                 {activeSection === item.title ? (

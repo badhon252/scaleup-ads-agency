@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { FlipText } from '@/lib/RevealTexts';
 
 export default function Footer() {
   const socialLinks = [
@@ -13,7 +14,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-black text-white py-16">
+    <footer className="bg-[#121212] text-white py-16">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
         {/* Left Section */}
         <div className="space-y-6">
@@ -62,7 +63,9 @@ export default function Footer() {
       <div className="container mx-auto mt-16 px-4 flex flex-col md:flex-row justify-between items-center">
         <p className="text-gray-400 text-sm">
           © 2022 - 2025 | All rights reserved by{" "}
-          <Link href="@mailto:dev.khalidhossain@gmail.com">dev.khalidhossain@gmail.com</Link>
+          <Link href="@mailto:dev.khalidhossain@gmail.com">
+            dev.khalidhossain@gmail.com
+          </Link>
         </p>
         <nav className="flex space-x-8 mt-4 md:mt-0">
           {["ABOUT US", "CONTACT", "CAREER", "FAQS"].map((item) => (
@@ -73,9 +76,9 @@ export default function Footer() {
             >
               <Link
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors text-sm"
+                className="text-gray-200 hover:text-white font-medium transition-colors text-sm"
               >
-                {item}
+                <FlipText>{item}</FlipText>
               </Link>
             </motion.div>
           ))}
