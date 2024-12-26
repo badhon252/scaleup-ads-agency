@@ -8,7 +8,7 @@ export default function TopNavigationButton() {
       };
 
   return (
-      <div className="absolute bottom-6 right-6 z-10">
+      <div className="fixed bottom-6 right-6 z-[999999999] border rounded-full bg-black text-white">
         <Button
           variant="ghost"
           size="icon"

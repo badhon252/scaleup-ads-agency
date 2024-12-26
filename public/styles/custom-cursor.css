@@ -1,56 +1,52 @@
-a:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  display: block;
-  margin-top: 0px;
-  left: 0%;
-  background: black;
-  transition: width 0.3s ease;
-}
-
-a:hover:after {
-  left: 0%;
-  background: black;
-}
-
+/* styles/CustomCursor.module.css */
 .cursor {
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  border: 1px solid black;
-  transition: all 500ms ease-out;
   position: fixed;
   pointer-events: none;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  transform: translate(-50%, -50%);
-  z-index: 111;
+  transform: translate3d(0, 0, 0);
+  z-index: 10000;
+  border-radius: 50%;
+  mix-blend-mode: difference;
 }
 
-.cursor2 {
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background-color: black;
-  opacity: 0.3;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  transition: width 0.3s, height 0.3s, opacity 0.3s;
-  z-index: 111;
+.cursor[data-cursor="0"] {
+  background-color: transparent;
+  height: 5px;
+  width: 5px;
+  border: 1px solid black
 }
 
-.hover {
-  background-color: red;
-  opacity: 0.5;
+.cursor[data-cursor="1"] {
+  border: 2px solid #fff;
+ height: 30px;
+    width: 30px;
+    border: 1px solid blue;
+    border-radius: 50%;
+  transition: all 0.15s ease;
 }
 
-.cursorinnerhover {
-  width: 50px;
-  height: 50px;
-  opacity: 0.5;
+/* Adjustments for hover */
+.cursorHover {
+  height: 120px;
+  width: 120px;
+  background-color: #fff;
+}
+
+/* Responsive cursor for smaller screens */
+@media (max-width: 1024px) {
+  .cursor[data-cursor="1"] {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cursor[data-cursor="1"] {
+    height: 15px;
+    width: 15px;
+  }
+
+  .cursorHover {
+    height: 60px;
+    width: 60px;
+  }
 }

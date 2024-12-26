@@ -28,7 +28,7 @@ export function Navbar() {
               >
                 <a
                   href={item.href}
-                  className="text-sm font-medium text-gray-800 hover:text-gray-600"
+                  className="text-md font-medium text-gray-800 hover:text-gray-600"
                 >
                   <FlipText>
                   {item.title}

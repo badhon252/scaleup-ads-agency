@@ -30,7 +30,7 @@ export function NavigationContent({
             className="w-full flex items-center justify-between text-white group"
           >
             <span
-              className="text-4xl md:text-6xl font-semibold py-5"
+              className="text-xl md:text-6xl font-semibold py-5"
             
             >
               <FlipText>{item.title}</FlipText>
