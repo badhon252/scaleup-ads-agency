@@ -21,11 +21,11 @@ export default function HorizontalSections() {
   
 
   return (
-    <div ref={targetRef} className="relative h-[400vh] ">
+    <div ref={targetRef} className="md:relative md:h-[400vh] ">
       <div className="sticky top-0 flex items-center h-screen overflow-hidden ">
         <motion.div
           style={{ x }}
-          className="border flex "
+          className="border sm:flex "
         >
           <WhyChooseUs />
           <StrategySection image={image} />

@@ -1,5 +1,7 @@
+'use client'
 import React from "react";
 import ServiceCategory from "./service-category";
+import { motion } from "framer-motion";
 
 // Service categories data with unique IDs
 const categories = [
@@ -41,15 +43,24 @@ export default function ServiceArea() {
         <div className="service__area--header md:pl-[300px] md:pt-[130px] relative">
           <div className="bg-white">
             <h4 className="text-[1rem] py-4 md:pt-[50px] pb-3 uppercase">Services</h4>
-            <h1 className="md:text-[60px] text-4xl font-bold uppercase py-4 md:pb-[40px]">
+            <motion.h1
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+
+            className="md:text-[60px] text-4xl font-bold uppercase py-4 md:pb-[40px]">
               Our Marketing <br /> Services
-            </h1>
+            </motion.h1>
           </div>
-          <p className="service__area--header-subtitle md:pt-[70px] md:pb-[60px] text-base md:ml-[250px] max-w-[410px] text-gray-600">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }} 
+          className="service__area--header-subtitle md:pt-[70px] md:pb-[60px] text-base md:ml-[250px] max-w-[410px] text-gray-600">
             Consumers today rely heavily on digital means to research products.
             We research brands by blending engaging content, while 51% of
             consumers say they use Google to research products before buying.
-          </p>
+          </motion.p>
         </div>
 
         {/* Service Categories */}

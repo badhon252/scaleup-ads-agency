@@ -9,8 +9,8 @@ export const WhyChooseUs = () => {
       transition={{ duration: 0.5 }}
       className="text-center leading-none w-[100vw]  flex flex-col justify-center items-center"
     >
-      <h1 className="text-[120px] font-bold mb-4">WHY</h1>
-      <h2 className="text-[120px] font-bold">CHOOSE US</h2>
+      <h1 className="md:text-[120px] sm:text-6xl font-bold mb-4">WHY</h1>
+      <h2 className="md:text-[120px] sm:text-6xl font-bold">CHOOSE US</h2>
     </motion.div>
   );
 };

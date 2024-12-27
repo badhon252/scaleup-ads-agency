@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
+// import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/contexts/theme-context'
 import '@/public/styles/globals.css'
 import CustomCursor from "@/lib/custom-cursor";
 import TopNavigationButton from '@/components/top-navigation-btn'
 import { Navbar } from "@/components/nav/navbar"
 
+// const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Axtra - Digital Agency',
@@ -18,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="font-Kanit">
+      <body >
         <CustomCursor/>
         <ThemeProvider>
           <Navbar />

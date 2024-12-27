@@ -1,6 +1,8 @@
+'use client'
 import React from "react";
 import Image from "next/image";
 import aboutImg from "@/public/assets/about-area-section.webp";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
@@ -12,18 +14,27 @@ export default function About() {
         <div className="md:flex-1">
           <div className="bg-[#121212] z-10 relative">
             <h4 className="md:pt-[45px]">Who We Are</h4>
-            <h1 className="md:text-[60px] text-4xl font-bold uppercase pb-[40px] leading-tight">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            className="md:text-[60px] text-4xl font-bold uppercase pb-[40px] leading-tight">
               We are leading <br /> digital marketing <br /> agency.
-            </h1>
+            </motion.h1>
           </div>
           <div className="about-area-section md:ml-[160px] pt-[45px]  ">
-            <p className="">
+            <motion.p
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            
+            className="">
               We’re a team of strategic mdigital marketing working globally with
               largest brands, We believe that progress only happens when you
               refused to play things safe. We combine ideas and behaviors, and
               insights with design, technological data to produce brand
               experiences that customers love our services.
-            </p>
+            </motion.p>
             <button className="btn-primary p-6 h-[170px] w-[170px] border border-gray-800 rounded-full mt-12 hover:bg-white hover:text-black transition-all duration-300 ">
               Explore Us
             </button>

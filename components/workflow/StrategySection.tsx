@@ -22,7 +22,7 @@ export const StrategySection = ({image}:{image:StaticImageData}) => {
             className="object-cover absolute bottom-0 left-[-100px]"
           />
 
-          <div className="uppercase">
+          <div className="uppercase ">
             <h2 className="leading-3 font-bold mb-4">Why</h2>
             <h3 className="leading-3 font-bold mb-8">Choose Us</h3>
           </div>

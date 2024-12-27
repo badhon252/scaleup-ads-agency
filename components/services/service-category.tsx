@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 interface ServiceCategoryProps {
@@ -16,13 +17,23 @@ export default function ServiceCategory({
     <>
       <hr className="text-gray-100 md:mt-8" />
       <div className="service__category md:pt-[55px] md:pb-[50px] md:flex justify-between">
-        <h1 className="text-3xl font-bold uppercase leading-tight pb-4 basis-1/4 text-wrap">
+        <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="text-3xl font-bold uppercase leading-tight pb-4 basis-1/4 text-wrap">
           {title}
-        </h1>
-        <div className="service__category-details max-w-[400px] font-medium basis-1/4">
+        </motion.h1>
+        <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="service__category-details max-w-[400px] basis-1/4">
           <p className="text-lg">{description}</p>
           <ServiceCategoryList list={list} />
-        </div>
+        </motion.div>
 
         <DetailsButton />
       </div>
