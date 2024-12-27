@@ -1,3 +1,7 @@
+'use client'
+import { useEffect } from "react";
+import Lenis from "lenis"
+
 import Hero from '@/components/hero/hero'
 import About from '@/components/about/about-area'
 import BrandLists from '@/components/brand-lists/brand-area'
@@ -10,7 +14,18 @@ import { BlogSection } from '@/components/blog/blog-section';
 import Footer from '@/components/footer/footer';
 import HorizontalSections from '@/components/workflow/horizontal-sections';
 
+
 export default function HomePage() {
+  useEffect(() => {
+    const lenis = new Lenis();
+    // Use requestAnimationFrame to continuously update the scroll
+    function raf(time:number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
   return (
     <main className="">
       <Hero />

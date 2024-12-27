@@ -20,7 +20,7 @@ export default function Hero() {
             Digital
           </motion.h2>
           <div>
-            <Image src={startImg} alt="footer-img" />
+            <Image src={startImg} loading='lazy' placeholder='blur' alt="footer-img" />
           </div>
         </div>
 
@@ -42,20 +42,16 @@ export default function Hero() {
         </div>
 
         <div className="flex justify-between flex-wrap-reverse">
-          <motion.h3
-            initial={{ opacity: 0.5, x: 100 }}
+          <motion.article
+            initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-          
-
             className="hero__text-3 "
           >
-            <p className="hero__text-animation py-4">
               Static and dynamic secure code review can prevent a day before
               your product is even released. We can integrate with your dev
               environment
-            </p>
-          </motion.h3>
+          </motion.article>
           <motion.h1
             initial={{ opacity: 0.5, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
