@@ -1,4 +1,3 @@
-/* styles/CustomCursor.module.css */
 .cursor {
   position: fixed;
   pointer-events: none;
@@ -12,15 +11,15 @@
   background-color: transparent;
   height: 5px;
   width: 5px;
-  border: 1px solid black
+  border: 1px solid black;
 }
 
 .cursor[data-cursor="1"] {
   border: 2px solid #fff;
- height: 30px;
-    width: 30px;
-    border: 1px solid blue;
-    border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  border: 1px solid blue;
+  border-radius: 50%;
   transition: all 0.15s ease;
 }
 

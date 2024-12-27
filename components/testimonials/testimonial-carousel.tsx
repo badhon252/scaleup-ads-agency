@@ -12,6 +12,21 @@ export function TestimonialCarousel() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const carouselRef = useRef<HTMLDivElement>(null);
 
+   const [windowWidth, setWindowWidth] = useState(0);
+   const [windowHeight, setWindowHeight] = useState(0);
+
+   useEffect(() => {
+     if (typeof window !== "undefined") {
+       const handleResize = () => {
+         setWindowWidth(window.innerWidth);
+         setWindowHeight(window.innerHeight);
+       };
+       window.addEventListener("resize", handleResize);
+       handleResize(); // Get initial dimensions
+       return () => window.removeEventListener("resize", handleResize);
+     }
+   }, []);
+
   const currentTestimonial = useMemo(
     () => testimonials[currentIndex],
     [currentIndex],
@@ -83,8 +98,8 @@ export function TestimonialCarousel() {
             style={position}
             className="absolute cursor-pointer" // Make images clickable (optional)
             animate={{
-              x: (mousePosition.x - window.innerWidth / 2) * 0.08, // Increased sensitivity
-              y: (mousePosition.y - window.innerHeight / 2) * 0.08, // Increased sensitivity
+              x: (mousePosition.x - windowWidth / 2) * 0.08, // Use windowWidth
+              y: (mousePosition.y - windowHeight / 2) * 0.08, // Use windowHeight
             }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
