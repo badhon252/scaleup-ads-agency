@@ -19,13 +19,12 @@ export default function HorizontalSections() {
 
       const x = useTransform(scrollYProgress, [0, 1], ["0%", "-75%"]);
   
-
   return (
-    <div ref={targetRef} className="md:relative md:h-[400vh] ">
-      <div className="sticky top-0 flex items-center h-screen overflow-hidden ">
+    <div ref={targetRef} className="md:relative md:h-[500vh] ">
+      <div className="md:sticky md:top-0 flex items-center justify-between md:h-screen overflow-hidden ">
         <motion.div
           style={{ x }}
-          className="border sm:flex "
+          className="border sm:flex"
         >
           <WhyChooseUs />
           <StrategySection image={image} />

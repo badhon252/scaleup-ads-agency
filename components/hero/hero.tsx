@@ -76,7 +76,7 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
             className="overflow-hidden hero-footer-img md:absolute md:right-[-300px] bottom-[150px]  z-0 "
           >
-            <Image src={headerImg} alt="footer-img" />
+            <Image loading='lazy' src={headerImg} alt="footer-img" />
           </motion.div>
         </div>
       </div>

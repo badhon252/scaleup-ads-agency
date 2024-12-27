@@ -7,7 +7,7 @@ export const Contact = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="text-center w-[100vw] flex flex-col justify-center items-center"
+      className="text-center w-[100vw] flex flex-col justify-center items-center bg-[#e0e3cc]"
     >
       <h4 className="text-[28px] mb-[25px]">Have you project in mind?</h4>
       <h2 className="text-[100px] font-medium pb-[60px]">

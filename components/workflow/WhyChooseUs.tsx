@@ -7,10 +7,14 @@ export const WhyChooseUs = () => {
       whileInView={{ opacity: 1, y: 0, scale: 1.4 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="text-center leading-none w-[100vw]  flex flex-col justify-center items-center"
+      className="z-10 bg-[#fffaf0] text-center leading-none min-w-[100vw] min-h-screen flex flex-wrap flex-col justify-center items-center"
     >
-      <h1 className="md:text-[120px] sm:text-6xl font-bold mb-4">WHY</h1>
-      <h2 className="md:text-[120px] sm:text-6xl font-bold">CHOOSE US</h2>
+      <h1 className="lg:text-[120px] md:text-8xl sm:text-6xl font-bold mb-4">
+        WHY
+      </h1>
+      <h2 className="lg:text-[120px] md:text-8xl sm:text-6xl font-bold">
+        CHOOSE US
+      </h2>
     </motion.div>
   );
 };

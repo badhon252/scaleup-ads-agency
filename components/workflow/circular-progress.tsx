@@ -18,7 +18,7 @@ export function CircularProgress({
   const circumference = 2 * Math.PI * 45; // radius is 45
 
   return (
-    <div className="flex items-center gap-4 pl-[100px] pb-[30px] flex-wrap">
+    <div className="h-fit w-fit flex md:flex-col md:justify-center md:gap-4 md:pl-[100px] pl-4  md:pb-[30px] pb-6">
       <motion.div
         className="relative w-32 h-32"
         initial={{ opacity: 0, scale: 0.5 }}

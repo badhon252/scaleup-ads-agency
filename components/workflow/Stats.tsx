@@ -3,7 +3,7 @@ import Image, { StaticImageData } from "next/image";
 
 export const Stats = ({ statsImg }: { statsImg: StaticImageData }) => {
   return (
-    <div className="flex items-center justify-between w-[100vw]">
+    <div className="flex items-center justify-between min-h-screen min-w-[100vw] bg-[#fffaf0] z-50">
       <div className="flex-1">
         <h4 className="text-lg mb-12 ml-12 uppercase font-bold">
           Why <br /> Choose Us
